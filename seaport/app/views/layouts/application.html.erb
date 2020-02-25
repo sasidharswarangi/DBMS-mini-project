@@ -22,17 +22,15 @@
 
         <% if user_signed_in? %>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<%= root_path %>">
               <span>Dashboard</span>
             </a>
           </li>
 
-          <hr class="sidebar-divider">
-
           <li class="nav-item">
-            <a class="nav-link" href="<%= destroy_user_session_path %>">
+            <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link' do %>
               <span>Log out</span>
-            </a>
+            <% end %>
           </li>
         <% else %>
           <li class="nav-item">
