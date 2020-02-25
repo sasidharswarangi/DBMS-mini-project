@@ -58,13 +58,6 @@
           <div class="container-fluid">
             <h1 class="h3 mb-4 text-gray-800"><%= yield :title %></h1>
 
-            <% if notice %>
-              <p class="alert alert-success"><%= notice %></p>
-            <% end %>
-
-            <% if alert %>
-              <p class="alert alert-success"><%= alert %></p>
-            <% end %>
 
             <%= yield %>
           </div>
@@ -80,4 +73,17 @@
       </div>
     </div>
   </body>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script>
+    <% if notice %>
+      toastr.success("<%= notice %>")
+    <% end %>
+
+    <% if alert %>
+      toastr.error("<%= alert %>")
+    <% end %>
+  </script>
 </html>
