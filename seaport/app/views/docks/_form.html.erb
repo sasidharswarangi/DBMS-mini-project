@@ -1,0 +1,32 @@
+<%= form_with(model: dock, local: true) do |form| %>
+  <% if dock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dock.errors.count, "error") %> prohibited this dock from being saved:</h2>
+
+      <ul>
+        <% dock.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :occupied %>
+    <%= form.check_box :occupied %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dock_number %>
+    <%= form.text_field :dock_number %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

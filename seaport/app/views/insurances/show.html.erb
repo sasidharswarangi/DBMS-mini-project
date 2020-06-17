@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @insurance.company_id %>
+</p>
+
+<p>
+  <strong>Insurance type:</strong>
+  <%= @insurance.insurance_type %>
+</p>
+
+<p>
+  <strong>Premium:</strong>
+  <%= @insurance.premium %>
+</p>
+
+<p>
+  <strong>Insurance number:</strong>
+  <%= @insurance.insurance_number %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @insurance.cargo %>
+</p>
+
+<%= link_to 'Edit', edit_insurance_path(@insurance) %> |
+<%= link_to 'Back', insurances_path %>

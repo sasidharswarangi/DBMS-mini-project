@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Selling company:</strong>
+  <%= @cargo.selling_company_id %>
+</p>
+
+<p>
+  <strong>Buying company:</strong>
+  <%= @cargo.buying_company_id %>
+</p>
+
+<p>
+  <strong>Container number:</strong>
+  <%= @cargo.container_number %>
+</p>
+
+<p>
+  <strong>Container value:</strong>
+  <%= @cargo.container_value %>
+</p>
+
+<p>
+  <strong>Goods:</strong>
+  <%= @cargo.goods %>
+</p>
+
+<%= link_to 'Edit', edit_cargo_path(@cargo) %> |
+<%= link_to 'Back', cargos_path %>

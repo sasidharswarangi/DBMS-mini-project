@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ship_type: MyString
+  insurance: one
+  captain: MyString
+  beginning: MyString
+  destination: MyString
+
+two:
+  name: MyString
+  ship_type: MyString
+  insurance: two
+  captain: MyString
+  beginning: MyString
+  destination: MyString

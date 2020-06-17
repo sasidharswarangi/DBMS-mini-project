@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  selling_company_id: 1
+  buying_company_id: 1
+  container_number: MyString
+  container_value: 1
+  goods: MyString
+
+two:
+  selling_company_id: 1
+  buying_company_id: 1
+  container_number: MyString
+  container_value: 1
+  goods: MyString

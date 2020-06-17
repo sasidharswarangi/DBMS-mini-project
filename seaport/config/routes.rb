@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :ships
+  resources :docks
+  resources :ports
+  resources :insurances
+  resources :cargos
+  resources :companies
   root to: 'pages#dashboard'
   get 'pages/dashboard'
   devise_for :users

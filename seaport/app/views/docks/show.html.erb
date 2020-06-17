@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occupied:</strong>
+  <%= @dock.occupied %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @dock.size %>
+</p>
+
+<p>
+  <strong>Dock number:</strong>
+  <%= @dock.dock_number %>
+</p>
+
+<%= link_to 'Edit', edit_dock_path(@dock) %> |
+<%= link_to 'Back', docks_path %>
