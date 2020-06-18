@@ -9,6 +9,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
   </head>
 
   <body id="page-top">
@@ -24,6 +26,24 @@
           <li class="nav-item">
             <a class="nav-link" href="<%= root_path %>">
               <span>Dashboard</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<%= %>">
+              <span>Docks</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<%=ships_path %>">
+              <span>Incoming Ships</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span>Allocate Dock</span>
             </a>
           </li>
 
@@ -76,6 +96,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 
   <script>
     <% if notice %>

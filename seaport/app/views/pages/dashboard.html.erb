@@ -5,13 +5,33 @@
     <div class="card shadow mb-4">
       <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
         <h6 class="m-0 font-weight-bold text-primary">
-          Work In Progress
+          Overview | Docks
         </h6>
       </div>
 
       <div class="card-body">
-        <div class="chart-area">
-          <img src="https://073bddbe7aa062defd37fde3-cwzdvdpfea.netdna-ssl.com/wp-content/uploads/2011/08/marinehighway.jpg" style="width: 500px"/>
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Total</th>
+                <th>Occupied</th>
+                <th>Available</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @docks.each do |size, docks| %>
+                <tr>
+                  <td><%= size %></td>
+                  <td><%= docks.length %></td>
+                  <td><%= docks.count(&:occupied) %></td>
+                  <td><%= docks.length - docks.count(&:occupied) %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
