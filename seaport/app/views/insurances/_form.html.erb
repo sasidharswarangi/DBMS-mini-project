@@ -1,4 +1,4 @@
-<%= form_with(model: insurance, local: true) do |form| %>
+<%= bootstrap_form_for(insurance, local: true, layout: :horizontal) do |form| %>
   <% if insurance.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(insurance.errors.count, "error") %> prohibited this insurance from being saved:</h2>
@@ -11,32 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :company_id %>
-    <%= form.text_field :company_id %>
-  </div>
+  <%= form.collection_select :ship, Ship.all, :id, :name %>
 
-  <div class="field">
-    <%= form.label :insurance_type %>
-    <%= form.text_field :insurance_type %>
-  </div>
+  <%= form.text_field :insurance_type, label: 'Type of Insurance' %>
 
-  <div class="field">
-    <%= form.label :premium %>
-    <%= form.text_field :premium %>
-  </div>
+  <%= form.number_field :premium, label: 'Premium Amount (in ₹)' %>
 
-  <div class="field">
-    <%= form.label :insurance_number %>
-    <%= form.text_field :insurance_number %>
-  </div>
+  <%= form.text_field :cargo_id, label: 'Type of Cargo associated with Ship' %>
 
-  <div class="field">
-    <%= form.label :cargo %>
-    <%= form.text_field :cargo %>
-  </div>
+  <%= form.file_field :document, value: nil, label: 'Upload Reciept' %>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="text-center">
+    <%= form.submit 'Register Insurance', class: 'btn btn-primary' %>
   </div>
 <% end %>

@@ -10,6 +10,8 @@ class ShipsController < ApplicationController
   # GET /ships/1
   # GET /ships/1.json
   def show
+    @ships = Ship.all
+    @docks = Dock.limit(10)
   end
 
   # GET /ships/new
@@ -64,7 +66,7 @@ class ShipsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ship
-      @ship = Ship.find(params[:id])
+      @ship = Ship.first
     end
 
     # Only allow a list of trusted parameters through.

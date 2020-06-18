@@ -1,5 +1,17 @@
-<h1>New Insurance</h1>
+<%= content_for :title do %>Register Insurance<% end %>
 
-<%= render 'form', insurance: @insurance %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">
+          Register Insurance
+        </h6>
+      </div>
 
-<%= link_to 'Back', insurances_path %>
+      <div class="card-body">
+        <%= render 'form', insurance: @insurance %>
+      </div>
+    </div>
+  </div>
+</div>

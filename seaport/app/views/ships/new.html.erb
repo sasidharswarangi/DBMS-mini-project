@@ -1,5 +1,17 @@
-<h1>New Ship</h1>
+<%= content_for :title do %>Register New Ship<% end %>
 
-<%= render 'form', ship: @ship %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">
+          Register New Ship
+        </h6>
+      </div>
 
-<%= link_to 'Back', ships_path %>
+      <div class="card-body">
+        <%= render 'form', ship: @ship %>
+      </div>
+    </div>
+  </div>
+</div>

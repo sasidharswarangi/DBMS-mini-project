@@ -8,6 +8,8 @@
 
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
 
+    <%= f.select :role, options_for_select([['Port Worker', 1], ['Company', 2], ['Captain', 3]]) %>
+
     <center>
       <%= f.primary "Sign up" %>
     </center>
